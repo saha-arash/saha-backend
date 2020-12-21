@@ -1,0 +1,77 @@
+{
+    "name": "BargeMamooriat",
+    "fields": [
+        {
+            "fieldName": "vaziat",
+            "fieldType": "VaziatBargeMamooriat",
+            "fieldValues": "SARPARAST_TIME_HESABRESI,DAR_ENTEZAR_TAEED_MODIR_HESABRESI,DAR_ENTEZAR_TAEED_MOAVEN_HESABRESI,DAR_ENTEZAR_TAEED_JANESHIN_SAZMAN,DAR_ENTEZAR_TAEED_RIASATSAZMAN,DAR_ENTEZAR_TAEED_HEYAT_RAESE_AJA"
+        },
+        {
+            "fieldName": "saleMamooriat",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "shorooMamooriat",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "payanMamooriat",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "fileBargeMamooriat",
+            "otherEntityRelationshipName": "bargeMamooriat",
+            "relationshipName": "madarek"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "sarparestemamooriat",
+            "relationshipName": "sarparast",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "bargeMamoorit",
+            "relationshipName": "yegan",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hesabResi",
+            "otherEntityRelationshipName": "bargeMamooriat",
+            "relationshipName": "hesabResi",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "bargeMamoorit",
+            "relationshipName": "nafar",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "binanadeBargeMamoorit",
+            "relationshipName": "binande",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20201221163900",
+    "entityTableName": "barge_mamooriat",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

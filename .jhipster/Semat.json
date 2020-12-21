@@ -1,0 +1,27 @@
+{
+    "name": "Semat",
+    "fields": [
+        {
+            "fieldName": "onvanShoghli",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "semat",
+            "relationshipName": "karbar"
+        }
+    ],
+    "changelogDate": "20201221163500",
+    "entityTableName": "semat",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

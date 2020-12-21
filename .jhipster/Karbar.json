@@ -1,0 +1,129 @@
+{
+    "name": "Karbar",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shoghlSazmani",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shoghlAmali",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "codePerseneli",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bezaneshate",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sazmani",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "tarikhBazneshastegi",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "tarikhEstekhdam",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "morkhasi",
+            "otherEntityRelationshipName": "karbar",
+            "relationshipName": "morkhasi"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dore",
+            "otherEntityRelationshipName": "karbar",
+            "relationshipName": "dore"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "negahbani",
+            "otherEntityRelationshipName": "karbar",
+            "relationshipName": "negahbani"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bargeMamooriat",
+            "otherEntityRelationshipName": "sarparast",
+            "relationshipName": "sarparestemamooriat"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "payam",
+            "otherEntityRelationshipName": "karbarErsalKonande",
+            "relationshipName": "sandoghVoroodi"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "payam",
+            "otherEntityRelationshipName": "karbarDaryaftKonand",
+            "relationshipName": "snadoghKhorooji"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "bargeMamooriat",
+            "otherEntityRelationshipName": "nafar",
+            "relationshipName": "bargeMamoorit",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "bargeMamooriat",
+            "otherEntityRelationshipName": "binande",
+            "relationshipName": "binanadeBargeMamoorit",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "karbar",
+            "relationshipName": "yegan",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "yeganCode",
+            "otherEntityRelationshipName": "karbar",
+            "relationshipName": "yeganCode",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "daraje",
+            "otherEntityRelationshipName": "karbar",
+            "relationshipName": "daraje",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "semat",
+            "otherEntityRelationshipName": "karbar",
+            "relationshipName": "semat",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221163400",
+    "entityTableName": "karbar",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

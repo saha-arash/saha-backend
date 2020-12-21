@@ -1,0 +1,29 @@
+{
+    "name": "FileBargeMamooriat",
+    "fields": [
+        {
+            "fieldName": "madarek",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bargeMamooriat",
+            "otherEntityRelationshipName": "madarek",
+            "relationshipName": "bargeMamooriat",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221164200",
+    "entityTableName": "file_barge_mamooriat",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

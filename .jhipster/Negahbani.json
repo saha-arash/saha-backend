@@ -1,0 +1,32 @@
+{
+    "name": "Negahbani",
+    "fields": [
+        {
+            "fieldName": "begin",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "end",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "negahbani",
+            "relationshipName": "karbar",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221163800",
+    "entityTableName": "negahbani",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

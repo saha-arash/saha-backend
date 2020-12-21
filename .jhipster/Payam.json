@@ -1,0 +1,60 @@
+{
+    "name": "Payam",
+    "fields": [
+        {
+            "fieldName": "onvan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "matn",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "fileName",
+            "otherEntityRelationshipName": "name",
+            "relationshipName": "madarek"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "sandoghVoroodi",
+            "relationshipName": "karbarErsalKonande",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "snadoghKhorooji",
+            "relationshipName": "karbarDaryaftKonand",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "sandoghVoroodi",
+            "relationshipName": "yeganErsalKonanade",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "snadoghKhorooji",
+            "relationshipName": "yeganDaryaftKonanade",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221163200",
+    "entityTableName": "payam",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

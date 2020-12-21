@@ -1,0 +1,93 @@
+{
+    "name": "Yegan",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "yegan",
+            "relationshipName": "karbar"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "payam",
+            "otherEntityRelationshipName": "yeganErsalKonanade",
+            "relationshipName": "sandoghVoroodi"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "payam",
+            "otherEntityRelationshipName": "yeganDaryaftKonanade",
+            "relationshipName": "snadoghKhorooji"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bargeMamooriat",
+            "otherEntityRelationshipName": "yegan",
+            "relationshipName": "bargeMamoorit"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "yegan",
+            "relationshipName": "zirYegan",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "yeganCode",
+            "otherEntityRelationshipName": "yegan",
+            "relationshipName": "yeganCode",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nirooCode",
+            "otherEntityRelationshipName": "yegan",
+            "relationshipName": "nirooCode",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "shahr",
+            "otherEntityRelationshipName": "yegan",
+            "relationshipName": "shahr",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "yeganType",
+            "otherEntityRelationshipName": "yegan",
+            "relationshipName": "yeganType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "zirYegan",
+            "relationshipName": "yegan",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20201221164600",
+    "entityTableName": "yegan",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

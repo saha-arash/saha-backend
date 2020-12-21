@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Yegan.
+    -->
+    <changeSet id="20201221164600-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="yegan_id"
+                                 baseTableName="yegan_zir_yegan"
+                                 constraintName="fk_yegan_zir_yegan_yegan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan"/>
+
+        <addForeignKeyConstraint baseColumnNames="zir_yegan_id"
+                                 baseTableName="yegan_zir_yegan"
+                                 constraintName="fk_yegan_zir_yegan_zir_yegan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan"/>
+        
+        <addForeignKeyConstraint baseColumnNames="niroo_code_id"
+                                 baseTableName="yegan"
+                                 constraintName="fk_yegan_niroo_code_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="niroo_code"/>
+
+        <addForeignKeyConstraint baseColumnNames="shahr_id"
+                                 baseTableName="yegan"
+                                 constraintName="fk_yegan_shahr_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="shahr"/>
+
+        <addForeignKeyConstraint baseColumnNames="yegan_type_id"
+                                 baseTableName="yegan"
+                                 constraintName="fk_yegan_yegan_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan_type"/>
+
+    </changeSet>
+</databaseChangeLog>

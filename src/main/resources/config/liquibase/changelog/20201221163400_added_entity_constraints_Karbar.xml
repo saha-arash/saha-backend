@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Karbar.
+    -->
+    <changeSet id="20201221163400-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="karbar_id"
+                                 baseTableName="karbar_barge_mamoorit"
+                                 constraintName="fk_karbar_barge_mamoorit_karbar_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="karbar"/>
+
+        <addForeignKeyConstraint baseColumnNames="barge_mamoorit_id"
+                                 baseTableName="karbar_barge_mamoorit"
+                                 constraintName="fk_karbar_barge_mamoorit_barge_mamoorit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="barge_mamooriat"/>
+        
+        <addForeignKeyConstraint baseColumnNames="karbar_id"
+                                 baseTableName="karbar_binanade_barge_mamoorit"
+                                 constraintName="fk_karbar_binanade_barge_mamoorit_karbar_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="karbar"/>
+
+        <addForeignKeyConstraint baseColumnNames="binanade_barge_mamoorit_id"
+                                 baseTableName="karbar_binanade_barge_mamoorit"
+                                 constraintName="fk_karbar_binanade_barge_mamoorit_binanade_barge_mamoorit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="barge_mamooriat"/>
+        
+        <addForeignKeyConstraint baseColumnNames="yegan_id"
+                                 baseTableName="karbar"
+                                 constraintName="fk_karbar_yegan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan"/>
+
+        <addForeignKeyConstraint baseColumnNames="yegan_code_id"
+                                 baseTableName="karbar"
+                                 constraintName="fk_karbar_yegan_code_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan_code"/>
+
+        <addForeignKeyConstraint baseColumnNames="daraje_id"
+                                 baseTableName="karbar"
+                                 constraintName="fk_karbar_daraje_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="daraje"/>
+
+        <addForeignKeyConstraint baseColumnNames="semat_id"
+                                 baseTableName="karbar"
+                                 constraintName="fk_karbar_semat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="semat"/>
+
+    </changeSet>
+</databaseChangeLog>

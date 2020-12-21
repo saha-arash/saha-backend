@@ -1,0 +1,32 @@
+{
+    "name": "Dore",
+    "fields": [
+        {
+            "fieldName": "begin",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "end",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "karbar",
+            "otherEntityRelationshipName": "dore",
+            "relationshipName": "karbar",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221163700",
+    "entityTableName": "dore",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

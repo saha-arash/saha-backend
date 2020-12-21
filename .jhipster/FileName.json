@@ -1,0 +1,29 @@
+{
+    "name": "FileName",
+    "fields": [
+        {
+            "fieldName": "madrak",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "payam",
+            "otherEntityRelationshipName": "madarek",
+            "relationshipName": "name",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221163300",
+    "entityTableName": "file_name",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

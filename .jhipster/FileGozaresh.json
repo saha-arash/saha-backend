@@ -1,0 +1,29 @@
+{
+    "name": "FileGozaresh",
+    "fields": [
+        {
+            "fieldName": "file",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gozaresh",
+            "otherEntityRelationshipName": "filehayegozaresh",
+            "relationshipName": "hesabResi",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221164800",
+    "entityTableName": "file_gozaresh",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

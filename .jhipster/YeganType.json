@@ -1,0 +1,27 @@
+{
+    "name": "YeganType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "yeganType",
+            "relationshipName": "yegan"
+        }
+    ],
+    "changelogDate": "20201221164400",
+    "entityTableName": "yegan_type",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

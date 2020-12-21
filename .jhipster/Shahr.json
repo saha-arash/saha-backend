@@ -1,0 +1,46 @@
+{
+    "name": "Shahr",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zaribAboHava",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "zaribTashilat",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "masafatTaMarkaz",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "yegan",
+            "otherEntityRelationshipName": "shahr",
+            "relationshipName": "yegan"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ostan",
+            "otherEntityRelationshipName": "shahr",
+            "relationshipName": "ostan",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221165100",
+    "entityTableName": "shahr",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity BargeMamooriat.
+    -->
+    <changeSet id="20201221163900-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="sarparast_id"
+                                 baseTableName="barge_mamooriat"
+                                 constraintName="fk_barge_mamooriat_sarparast_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="karbar"/>
+
+        <addForeignKeyConstraint baseColumnNames="yegan_id"
+                                 baseTableName="barge_mamooriat"
+                                 constraintName="fk_barge_mamooriat_yegan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan"/>
+
+        <addForeignKeyConstraint baseColumnNames="hesab_resi_id"
+                                 baseTableName="barge_mamooriat"
+                                 constraintName="fk_barge_mamooriat_hesab_resi_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hesab_resi"/>
+
+    </changeSet>
+</databaseChangeLog>

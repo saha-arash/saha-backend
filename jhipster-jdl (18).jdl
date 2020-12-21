@@ -106,7 +106,7 @@ entity FileGozaresh{
 }
 enum FileType {
 MadarekBarnameHesabResi , MohasebeHazineMamooriat , VoroodiBilanSalGhabl
-DastoorAmalEjraE , GardeshkarBarnameHesabresi 
+, DastoorAmalEjraE , GardeshkarBarnameHesabresi 
 , Madarek , KhoroojiBilanSalGhabl , VoroodiBilanSeSalGhabl , KhoroojiBilanSeSalGhabl
 , MadarekGozaresh , MostaKhreje , KholaseGozaresh , BankEtelaati , Nameh , RafeIradat
 , GardeshKar , NoeBarnameHesabResi , BarnameHesabResi
@@ -130,7 +130,7 @@ entity Shahr{
 
 
 entity Gozaresh{
-	vaziat NoeGozaresh
+	vaziat VaziatGozaresh
 }
 
 enum VaziatGozaresh{
@@ -161,9 +161,6 @@ relationship OneToMany {
     Yegan{snadoghKhorooji} to Payam{yeganDaryaftKonanade},
     Payam{madarek} to FileName{name},
     Yegan {bargeMamoorit} to BargeMamooriat{yegan},
-    HesabResi{voroodiBilanSalGhabl} to VoroodiBilanSalGhabl{hesabResiSalGhabl},
-    HesabResi{voroodiBilanSeSalGhabl} to VoroodiBilanSeSalGhabl{hesabResiSesaalGhabl},
-    BarnameHesabResi{madarek} to MadarekBarnameHesabResi{barnameHesabresi},
     HesabResi{bargeMamooriat} to BargeMamooriat{hesabResi},
     HesabResi{fileha} to FileHesabResi{hesabResi},
     Gozaresh{filehayegozaresh} to FileGozaresh{hesabResi},

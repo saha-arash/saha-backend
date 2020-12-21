@@ -1,0 +1,35 @@
+{
+    "name": "Gozaresh",
+    "fields": [
+        {
+            "fieldName": "vaziat",
+            "fieldType": "VaziatGozaresh",
+            "fieldValues": "AVALIE,MODIR,MOAVENAT,HEYAT_RAESE_SAZMAN,HEYATRAESE_AJA_NAHAE,EBLAGH_GOZARESH_BEYEGAN_HESABRESI_SHAVANDE"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "fileGozaresh",
+            "otherEntityRelationshipName": "hesabResi",
+            "relationshipName": "filehayegozaresh"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "hesabResi",
+            "otherEntityRelationshipName": "gozaresh",
+            "relationshipName": "hesabResi",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20201221165200",
+    "entityTableName": "gozaresh",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

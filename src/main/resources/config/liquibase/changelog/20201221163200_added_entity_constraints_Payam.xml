@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Payam.
+    -->
+    <changeSet id="20201221163200-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="karbar_ersal_konande_id"
+                                 baseTableName="payam"
+                                 constraintName="fk_payam_karbar_ersal_konande_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="karbar"/>
+
+        <addForeignKeyConstraint baseColumnNames="karbar_daryaft_konand_id"
+                                 baseTableName="payam"
+                                 constraintName="fk_payam_karbar_daryaft_konand_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="karbar"/>
+
+        <addForeignKeyConstraint baseColumnNames="yegan_ersal_konanade_id"
+                                 baseTableName="payam"
+                                 constraintName="fk_payam_yegan_ersal_konanade_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan"/>
+
+        <addForeignKeyConstraint baseColumnNames="yegan_daryaft_konanade_id"
+                                 baseTableName="payam"
+                                 constraintName="fk_payam_yegan_daryaft_konanade_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="yegan"/>
+
+    </changeSet>
+</databaseChangeLog>

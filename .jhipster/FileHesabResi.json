@@ -1,0 +1,53 @@
+{
+    "name": "FileHesabResi",
+    "fields": [
+        {
+            "fieldName": "file",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "shomare",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tarikhName",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "mozoo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fileType",
+            "fieldType": "FileType",
+            "fieldValues": "MadarekBarnameHesabResi,MohasebeHazineMamooriat,VoroodiBilanSalGhabl,DastoorAmalEjraE,GardeshkarBarnameHesabresi,Madarek,KhoroojiBilanSalGhabl,VoroodiBilanSeSalGhabl,KhoroojiBilanSeSalGhabl,MadarekGozaresh,MostaKhreje,KholaseGozaresh,BankEtelaati,Nameh,RafeIradat,GardeshKar,NoeBarnameHesabResi,BarnameHesabResi"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hesabResi",
+            "otherEntityRelationshipName": "fileha",
+            "relationshipName": "hesabResi",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "barnameHesabResi",
+            "otherEntityRelationshipName": "failha",
+            "relationshipName": "barnameHesabResi",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201221164700",
+    "entityTableName": "file_hesab_resi",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

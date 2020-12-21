@@ -1,0 +1,54 @@
+{
+    "name": "HesabResi",
+    "fields": [
+        {
+            "fieldName": "sal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "vaziateHesabResi",
+            "fieldType": "VaziateHesabResi",
+            "fieldValues": "SODOOR_BARGE_MAMOORIAT,DAR_SHOROF_MAMOORIAT,DAR_HALE_MAMOORIAT,ETMAM_MAMOORIAT_HOZOOR_DARSAZMAN"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "gozaresh",
+            "otherEntityRelationshipName": "hesabResi",
+            "relationshipName": "gozaresh",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "barnameHesabResi",
+            "otherEntityRelationshipName": "hesabResi",
+            "relationshipName": "barnameHesabResi",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bargeMamooriat",
+            "otherEntityRelationshipName": "hesabResi",
+            "relationshipName": "bargeMamooriat"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "fileHesabResi",
+            "otherEntityRelationshipName": "hesabResi",
+            "relationshipName": "fileha"
+        }
+    ],
+    "changelogDate": "20201221164000",
+    "entityTableName": "hesab_resi",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

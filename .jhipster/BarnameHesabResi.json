@@ -1,0 +1,35 @@
+{
+    "name": "BarnameHesabResi",
+    "fields": [
+        {
+            "fieldName": "noeBarnameHesabResi",
+            "fieldType": "NoeBarnameHesabResi",
+            "fieldValues": "HESABRESI_BARNAMEE,HESABRESI_PEYGIRI"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "fileHesabResi",
+            "otherEntityRelationshipName": "barnameHesabResi",
+            "relationshipName": "failha"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "hesabResi",
+            "otherEntityRelationshipName": "barnameHesabResi",
+            "relationshipName": "hesabResi",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20201221164100",
+    "entityTableName": "barname_hesab_resi",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
