@@ -1,0 +1,184 @@
+
+
+
+entity YeganCode{
+	name String,
+    code String
+}
+entity Payam{
+	onvan String,
+    matn TextBlob
+}
+
+entity FileName{
+	madrak AnyBlob
+}
+
+entity Karbar{
+/* login kone*/
+	name String,
+    shoghlSazmani String,
+    shoghlAmali String,
+    codePerseneli String,
+    bezaneshate Boolean,
+    sazmani Boolean,
+    tarikhBazneshastegi Instant,
+    tarikhEstekhdam Instant
+}
+
+entity Semat{
+	onvanShoghli String
+}
+entity Morkhasi{
+	begin Instant,
+    end Instant
+}
+entity Dore{
+	begin Instant,
+    end Instant
+}
+
+entity Negahbani{
+	begin Instant,
+    end Instant
+}
+entity BargeMamooriat{
+    vaziat VaziatBargeMamooriat,
+    saleMamooriat Integer,
+    shorooMamooriat Instant,
+    payanMamooriat Instant
+}
+enum VaziatBargeMamooriat{
+	SARPARAST_TIME_HESABRESI , DAR_ENTEZAR_TAEED_MODIR_HESABRESI , 
+    DAR_ENTEZAR_TAEED_MOAVEN_HESABRESI, DAR_ENTEZAR_TAEED_JANESHIN_SAZMAN
+   , DAR_ENTEZAR_TAEED_RIASATSAZMAN , DAR_ENTEZAR_TAEED_HEYAT_RAESE_AJA
+}
+entity HesabResi{
+    sal Integer,
+    vaziateHesabResi VaziateHesabResi
+}
+
+enum VaziateHesabResi{
+	SODOOR_BARGE_MAMOORIAT , DAR_SHOROF_MAMOORIAT , DAR_HALE_MAMOORIAT
+    , ETMAM_MAMOORIAT_HOZOOR_DARSAZMAN
+}
+enum NoeBarnameHesabResi{
+  HESABRESI_BARNAMEE , HESABRESI_PEYGIRI
+}
+entity BarnameHesabResi{
+		noeBarnameHesabResi NoeBarnameHesabResi
+}
+
+entity FileBargeMamooriat{
+		madarek AnyBlob
+}
+
+entity Daraje{
+	name String,
+    description String
+}
+
+entity YeganType{
+	name String
+}
+entity NirooCode{
+    name String,
+    code String
+}
+
+entity Yegan{
+/* login kone*/
+   name String,
+   code String
+}
+
+entity FileHesabResi{
+	file AnyBlob,
+    shomare Integer,
+    tarikhName Instant,
+    mozoo String,
+    fileType FileType
+}
+
+
+entity FileGozaresh{
+	file AnyBlob
+}
+enum FileType {
+MadarekBarnameHesabResi , MohasebeHazineMamooriat , VoroodiBilanSalGhabl
+DastoorAmalEjraE , GardeshkarBarnameHesabresi 
+, Madarek , KhoroojiBilanSalGhabl , VoroodiBilanSeSalGhabl , KhoroojiBilanSeSalGhabl
+, MadarekGozaresh , MostaKhreje , KholaseGozaresh , BankEtelaati , Nameh , RafeIradat
+, GardeshKar , NoeBarnameHesabResi , BarnameHesabResi
+}
+
+
+entity Mantaghe{
+   name String 
+}
+
+entity Ostan{
+	name String
+}
+
+entity Shahr{
+	name String,
+    zaribAboHava Integer,
+    zaribTashilat Integer,
+    masafatTaMarkaz Integer
+}
+
+
+entity Gozaresh{
+	vaziat NoeGozaresh
+}
+
+enum VaziatGozaresh{
+	AVALIE , MODIR , MOAVENAT , HEYAT_RAESE_SAZMAN , HEYATRAESE_AJA_NAHAE
+    , EBLAGH_GOZARESH_BEYEGAN_HESABRESI_SHAVANDE
+	
+}
+
+relationship OneToMany {
+	NirooCode{yeganCode} to YeganCode{nirooCode},
+    NirooCode{yegan} to Yegan{nirooCode},
+    Karbar {morkhasi} to Morkhasi{karbar},
+    Karbar {dore} to Dore{karbar},
+    Karbar {negahbani} to Negahbani{karbar},
+    Yegan {karbar} to Karbar{yegan},
+    YeganCode{karbar} to Karbar{yeganCode},
+    Mantaghe{ostan} to Ostan{mantaghe},
+    Ostan{shahr} to Shahr{ostan},
+    Shahr{yegan} to Yegan{shahr},
+    Daraje{karbar} to Karbar{daraje},
+    YeganType{yegan} to Yegan{yeganType},
+    Semat{karbar} to Karbar{semat},
+    Karbar{sarparestemamooriat} to BargeMamooriat{sarparast},
+    BargeMamooriat{madarek} to FileBargeMamooriat{bargeMamooriat}, 
+    Karbar{sandoghVoroodi} to Payam{karbarErsalKonande},
+    Karbar{snadoghKhorooji} to Payam{karbarDaryaftKonand},
+    Yegan{sandoghVoroodi} to Payam{yeganErsalKonanade},
+    Yegan{snadoghKhorooji} to Payam{yeganDaryaftKonanade},
+    Payam{madarek} to FileName{name},
+    Yegan {bargeMamoorit} to BargeMamooriat{yegan},
+    HesabResi{voroodiBilanSalGhabl} to VoroodiBilanSalGhabl{hesabResiSalGhabl},
+    HesabResi{voroodiBilanSeSalGhabl} to VoroodiBilanSeSalGhabl{hesabResiSesaalGhabl},
+    BarnameHesabResi{madarek} to MadarekBarnameHesabResi{barnameHesabresi},
+    HesabResi{bargeMamooriat} to BargeMamooriat{hesabResi},
+    HesabResi{fileha} to FileHesabResi{hesabResi},
+    Gozaresh{filehayegozaresh} to FileGozaresh{hesabResi},
+    BarnameHesabResi{failha} to FileHesabResi{barnameHesabResi}
+}
+relationship ManyToMany{
+ Yegan {zirYegan} to Yegan{yegan},
+ Karbar {bargeMamoorit} to BargeMamooriat{nafar},
+ Karbar {binanadeBargeMamoorit} to BargeMamooriat{binande}
+
+}
+relationship OneToOne {
+  YeganCode {yegan} to Yegan{yeganCode},
+  HesabResi{gozaresh} to Gozaresh{hesabResi},
+  HesabResi{barnameHesabResi} to BarnameHesabResi{hesabResi},
+}
+
+

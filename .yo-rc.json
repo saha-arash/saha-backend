@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ir.saha",
+      "nativeLanguage": "fa"
+    },
+    "jhipsterVersion": "6.7.1",
+    "applicationType": "monolith",
+    "baseName": "saha",
+    "packageName": "ir.saha",
+    "packageFolder": "ir/saha",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWE2MWVkMmFhNmMxY2Q0ODg3NmE3MWVlMjZlMGY4ODJiYzQ4ZmEzY2E5NzJiZTkwYjc4Zjc2OTM2YWQ3Zjk1NTllOGVkM2RiMDRhOGZlM2E5OGVlZWJlYTU2MGEwZTE5ZGIyNTk3ZWVmMjVmMjVkNmY4NjVkMDJhM2YyNDNmMTc=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1608567778780,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "fa",
+    "languages": ["fa"],
+    "blueprints": [],
+    "skipClient": true
+  }
+}
